@@ -169,15 +169,15 @@ h1 {
   }
 }
 
-.card {
+.game-item {
 
   > * + * {
     margin: 0.3rem auto;
   }
-  &__title {
+  &__name {
     font-size: 0.9rem;
   }
-  &__viewers {
+  &__popularity {
     font-size: 0.7rem;
     color: $c-lightTextCard;
   }
