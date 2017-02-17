@@ -6,27 +6,179 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'box-sizing';
 
 $c-white: #fff;
-$c-darkpurple: #20024b;
+$c-darkpurple: #0f0024;
+$c-purple: #8944af;
+$c-hover: rgba(#fff,.1);
+$c-lightText: rgba(#fff,.5);
+$c-lightPurple: rgba(#d667fe,1);
+$c-lightTextCard: rgba(#000,.5);
 
 img {
   max-width: 100%;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-weight: normal;
 }
 
 .sidebar {
   background: $c-darkpurple;
   color: $c-white;
   margin: -0.5rem;
-  padding: 1rem;
+  padding: 0.5rem 1.5rem;
   width: 20vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  > * {
+    margin: 0.5rem;
+    width: 100%;
+  }
 
   &__logo {
     width: 6rem;
   }
+}
+
+.navbar {
+  width: 100%;
 
   > * {
-    margin: 0.5rem;
+    margin: 0 -1.5rem;
+    padding: 0.5rem 1.5rem;
+
+    &:hover {
+      background: $c-hover;
+    }
+  }
+}
+
+.games {
+  background: $c-hover;
+  border-left: $c-purple 0.2rem solid;
+}
+
+.subheading {
+  border-bottom: $c-hover 0.1rem solid;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding-bottom: 0.4rem;
+}
+
+.row {
+  display: flex;
+  padding: 0.5rem 1.5rem;
+  margin: 0 -1.5rem;
+
+  &:hover {
+    background: $c-hover;
+  }
+
+  &__pic {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin: -0.1rem 0.5rem;
+    font-size: 1rem;
+
+    > * + * {
+      color: $c-lightText;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.more {
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.5rem;
+
+    &__item {
+      flex-basis: calc(50% + 0rem);
+      margin: 0;
+      padding-left: 1.5rem;
+      line-height: 0.8rem;
+      font-size: 0.8rem;
+      color: $c-lightText;
+
+      &:hover {
+        color: $c-white;
+        background: $c-hover;
+      }
+    }
+  }
+}
+
+.account {
+  display: flex;
+  justify-content: space-around;
+  // margin-bottom: 1rem;
+
+  &__button {
+    background: $c-purple;
+    border: none;
+    height: 2rem;
+    width: 6rem;
+    font-size: 0.8rem;
+    color: $c-white;
+
+    &:hover {
+      background: $c-lightPurple;
+    }
+  }
+}
+
+.blankspace {
+  height: 5rem;
+}
+
+.section {
+  padding: 1rem;
+  padding-left: 20vw;
+}
+
+.container {
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+
+  &__item {
+    flex-basis: calc(100% / 6 - 2rem);
+    margin: 1rem;
+    // flex-grow: 1;
+  }
+}
+
+.card {
+
+  > * + * {
+    margin: 0.3rem auto;
+  }
+  &__title {
+    font-size: 0.9rem;
+  }
+  &__viewers {
+    font-size: 0.7rem;
+    color: $c-lightTextCard;
   }
 }
