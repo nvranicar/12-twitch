@@ -1,4 +1,4 @@
-export default function createGameElement(data, x) {
+export default function createGameElement(data) {
   const el = document.createElement('div');
   el.classList.add('grid__item');
   el.innerHTML = `
