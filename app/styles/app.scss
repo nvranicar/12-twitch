@@ -45,7 +45,8 @@ h1 {
   }
 
   &__logo {
-    width: 6rem;
+    width: 9rem;
+    margin: 0;
   }
 }
 
@@ -58,13 +59,9 @@ h1 {
 
     &:hover {
       background: $c-hover;
+      border-left: $c-purple 0.2rem solid;
     }
   }
-}
-
-.games {
-  background: $c-hover;
-  border-left: $c-purple 0.2rem solid;
 }
 
 .subheading {
